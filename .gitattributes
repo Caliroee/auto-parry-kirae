@@ -1,0 +1,2 @@
+# Preserva os terminadores CRLF dos inicializadores do Windows.
+*.bat -text

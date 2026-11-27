@@ -1,0 +1,61 @@
+VALIDAÇÃO OFFLINE — AUTO-PARRY KIRAE
+========================================================================
+Vídeo: vesper parry.mov
+Quadros processados: 1289 a 60 fps (21.483 s)
+Recorte FFmpeg: crop=454:480:733:318 (largura/altura pares)
+Teclas enviadas: nenhuma (somente simulação offline)
+
+Rodadas detectadas: 5
+Transições registradas: 15
+Geometria derivada no recorte: centro=(227.51, 189.50) px, raio=84.04 px; no vídeo original: centro=(960.51, 507.50) px.
+Detecção adicional fora das rodadas: 0
+Teste com automação DESLIGADA: 5 rodadas reconhecidas e 0 prazos de tecla retornados (quadros: 1289).
+
+Nº | centro branco | largura branca | cinza | omega | hold (intervalo)
+---|---------------|----------------|-------|-------|----------------
+1  | 150.75° | 10.50° | 35.50° | 326.68°/s | 470.6 ms*
+2  | 36.50° | 10.00° | 35.50° | 325.88°/s | 482.1 ms*
+3  | 35.50° | 10.00° | 35.00° | 326.15°/s | 466.6 ms*
+4  | 132.75° | 10.50° | 36.00° | 326.39°/s | 473.0 ms*
+5  | 95.75° | 10.50° | 35.50° | 326.27°/s | 474.5 ms*
+
+CONVERGÊNCIA DE t_hit (erro absoluto vs. trajetória medida)
+0 amostras: máximo 8.62 ms; média 4.57 ms
+1 a 5 amostras: máximo 2.45 ms; média 1.32 ms
+6 ou mais amostras: máximo 2.96 ms; média 0.49 ms
+
+ERRO DE CONVERGÊNCIA POR RODADA (ms, valor absoluto máximo)
+Nº | 0 amostras | 1–5 amostras | >=6 amostras
+---|------------|--------------|-------------
+1  | 5.08 | 2.45 | 1.36
+2  | 8.62 | 0.47 | 0.83
+3  | 7.13 | 0.84 | 0.73
+4  | 1.88 | 2.10 | 2.96
+5  | 0.16 | 1.50 | 1.41
+
+AGENDAMENTO SIMULADO (t_press + compensação − t_hit real)
+Maior erro absoluto: 0.299 ms (0.098°)
+A compensação usada foi 35 ms; nenhum evento de teclado foi enviado.
+
+ERRO DE CONGELAMENTO LIDO NO VÍDEO
+Nº | erro angular | erro temporal
+---|--------------|--------------
+1  | +17.51° | +53.62 ms
+2  | +14.80° | +45.40 ms
+3  | +3.31° | +10.13 ms
+4  | -2.05° | -6.27 ms
+5  | +5.53° | +16.96 ms
+
+DETALHES POR RODADA
+Rodada 1: centro=150.75°, branco=10.50°, início/posição cinza=192.00°, largura cinza=35.50°, omega=326.68°/s, t_hit=2.140885s, amostras no disparo=42.
+Rodada 2: centro=36.50°, branco=10.00°, início/posição cinza=78.00°, largura cinza=35.50°, omega=325.88°/s, t_hit=3.853587s, amostras no disparo=20.
+Rodada 3: centro=35.50°, branco=10.00°, início/posição cinza=76.50°, largura cinza=35.00°, omega=326.15°/s, t_hit=5.951430s, amostras no disparo=20.
+Rodada 4: centro=132.75°, branco=10.50°, início/posição cinza=174.00°, largura cinza=36.00°, omega=326.39°/s, t_hit=8.505454s, amostras no disparo=38.
+Rodada 5: centro=95.75°, branco=10.50°, início/posição cinza=137.00°, largura cinza=35.50°, omega=326.27°/s, t_hit=10.577149s, amostras no disparo=32.
+
+Velocidade média ajustada: 326.27°/s (desvio de +0.77°/s vs. 325,5°/s esperado).
+* Hold estimado pela origem da rotação obtida por regressão linear; a incerteza prática é limitada pela captura de 60 fps (cerca de ±8,3 ms).
+
+LIMITAÇÕES
+A precisão de agendamento é uma simulação matemática baseada no vídeo. Ela não mede a latência real de pynput/Windows, a latência de apresentação do navegador nem o jitter da máquina durante uma partida.
+O hold foi interpolado pela regressão da trajetória; como a fonte tem 60 fps, a incerteza prática dessa interpolação é de aproximadamente um quadro.

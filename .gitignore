@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+/build/
+/dist/
+*.spec
+
+/auto_parry_config.json
+/auto_parry_claim.json
+/auto_parry_tema.json
+/auto_parry_erro.log
+*.tmp
+
+/AutoParryKirae_v*/
+/AutoParryKirae_v*.zip
